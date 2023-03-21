@@ -16,6 +16,7 @@ set_point_clr 38000     #解除调节机制的温度点
 time_constant 0         #采样错误时的延迟调整时间
 device_perf_floor 2323200 #设置当前温度区间下自动降频的下限（2.3232GHz），此下限仍无法降温则待温度上升至下一个温度区间按照下一个区间的设置继续降频
 ```
+```
 [HIGH-BAT_SOC_HOTPLUG_MONITOR]
 algo_type   monitor                         #采用监控策略
 sampling   2000
@@ -26,6 +27,7 @@ actions   hotplug_6+hotplug_7+cpu4          #动作控制对象：热插拔6号�
 action_info   1+1+1286400                   #动作信息：关闭+关闭+1.2864GHz
 descending                                  #触发点清除点倒序，没有此指令则正序
 ```
+```
 [BATTERY-MONITOR]
 algo_type       	monitor                   #采用监控策略
 sampling        	2000                      
@@ -34,3 +36,4 @@ thresholds      	42000		44000		46000
 thresholds_clr  	41000		43000		45000
 actions 		battery		battery		battery    #动作控制对象
 action_info		1		2		3                    #动作指令，此例中为电池充电电流
+```
